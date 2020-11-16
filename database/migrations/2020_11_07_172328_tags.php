@@ -16,7 +16,7 @@ class Tags extends Migration
         Schema::create('tags', function (Blueprint $table){
             $table->increments('id');
             $table->string('tag');
-            $table->integer('id_post');     
+            $table->integer('posts_id');     
         });
     }
 
