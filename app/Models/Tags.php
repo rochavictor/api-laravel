@@ -6,13 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tags extends Model
 {
+
+    public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'tag', 'id_post'
+        'tag', 
+        'posts_id'
     ];
 
     /**
@@ -20,11 +24,8 @@ class Tags extends Model
      *
      * @var array
      */
-    
-    protected $hidden = [];
-
-    public function tags()
-    {
-        return $this->hasMany('App\Models\Tags');
-    }
+    protected $hidden = [
+        'id', 
+        'posts_id'
+    ];
 }
