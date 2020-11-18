@@ -21,5 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('/v1')->group(function (){
     Route::get('/posts', 'App\Http\Controllers\PostsController@show');
+    Route::get('/posts/{tag}', 'App\Http\Controllers\PostsController@showbytag');
     Route::post('/posts', 'App\Http\Controllers\PostsController@register');
 });

@@ -25,7 +25,6 @@ class Tags extends Model
      * @var array
      */
     protected $hidden = [
-        'id', 
-        'posts_id'
+        'id'
     ];
 }
